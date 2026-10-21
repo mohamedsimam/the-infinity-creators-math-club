@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import LaunchScreen from "./components/LaunchScreen";
 
 export const metadata: Metadata = {
   title: "The Infinity Creators — Math Club | KM/KM/ Al-Ashraq MMV (National School)",
@@ -25,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ScrollToTop />
+        <LaunchScreen />
         <Navbar />
         <main>{children}</main>
         <Footer />

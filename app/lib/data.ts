@@ -183,50 +183,50 @@ export interface ClubData {
 
 const DEFAULT_DATA: ClubData = {
   welcomeMessage: "Welcome to The Infinity Creators — the official MATH CLUB of KM/KM/ Al-Ashraq MMV (National School), Nintavur. Our club is dedicated to exploring the beauty and power of mathematics, developing logical minds, and inspiring the next generation of thinkers and innovators. We believe every student has the potential to discover the wonder of mathematics.",
-  presidentName: '',
-  presidentPhoto: '',
+  presidentName: 'L. Mohamed Simam',
+  presidentPhoto: '/images/officials/lm-simam.png',
   principals: [
     {
       id: 'prin-1',
       name: 'Mr. A. Abdul Gafoor',
       designation: 'Principal',
       role: 'Patron of The Infinity Creators MATH CLUB',
-      photo: '',
+      photo: '/images/principals/principal-abdul-gafoor.jpg',
     },
     {
       id: 'prin-2',
       name: 'Mr. HMM. Anees',
       designation: 'Deputy Principal',
       role: 'Advisory Board & Academic Oversight',
-      photo: '',
+      photo: '/images/principals/deputy-principal-anees.jpg',
     },
     {
       id: 'prin-3',
       name: 'Mr. AAMM. Aslam Merza',
       designation: 'Deputy Principal',
       role: 'Advisory Board & Student Leadership',
-      photo: '',
+      photo: '/images/principals/deputy-principal-aslam-merza.jpg',
     },
     {
       id: 'prin-4',
       name: 'Mrs. IM. Inafa Nazhath',
       designation: 'Assistant Principal',
       role: 'Academic Advisory & Curriculum Support',
-      photo: '',
+      photo: '/images/principals/assistant-principal-inafa.jpg',
     },
     {
       id: 'prin-5',
       name: 'Mr. MMM. Uvaiz',
       designation: 'Assistant Principal',
       role: 'Administrative Coordination & Student Mentorship',
-      photo: '',
+      photo: '/images/principals/assistant-principal-uvaiz.jpg',
     },
   ],
   teachers: [
     {
       id: 't-01',
       name: 'Mr. MYM. Sathik',
-      photo: '',
+      photo: '/images/officials/mr-mym-sathik.jpg',
       designation: 'Math Club Incharge',
       subject: 'Mathematics',
       introduction: 'Guiding and mentoring the club, supervising academic and extracurricular initiatives, and nurturing mathematical curiosity across student grades.',
@@ -237,7 +237,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-02',
       name: 'Mrs. NM. Zilmy',
-      photo: '',
+      photo: '/images/officials/female-teacher-mockup.jpeg',
       designation: 'Math Club Co-Incharge',
       subject: 'Mathematics',
       introduction: 'Coordinating club schedules, mentoring competitive mathematics preparations, and guiding student committee members.',
@@ -248,7 +248,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-03',
       name: 'Mr. MI. Nawas',
-      photo: '',
+      photo: '/images/officials/mr-mi-nawas.png',
       designation: 'Maths Coordinator',
       subject: 'Mathematics',
       introduction: 'Coordinating mathematics curriculum alignment, seminar series, and analytical skill-building workshops.',
@@ -259,7 +259,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-04',
       name: 'Mrs. SM. Saajitha Banu',
-      photo: '',
+      photo: '/images/officials/female-teacher-mockup.jpeg',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Faculty mentor supporting student engagement in mathematical problem solving and conceptual clarity.',
@@ -270,7 +270,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-05',
       name: 'Mr. AL. Farook',
-      photo: '',
+      photo: '/images/officials/mr-al-farook.png',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Guiding students in algebraic problem-solving and rigorous mathematical reasoning.',
@@ -281,7 +281,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-06',
       name: 'Mrs. AK. Shihama',
-      photo: '',
+      photo: '/images/officials/female-teacher-mockup.jpeg',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Encouraging exploratory mathematics, peer problem solving, and secondary math foundation.',
@@ -292,7 +292,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-07',
       name: 'Mr. A. Wahesan',
-      photo: '',
+      photo: '/images/officials/mr-a-wahesan.png',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Dedicated mathematics educator inspiring analytical thinking and competitive problem solving.',
@@ -303,7 +303,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-08',
       name: 'Mrs. SL. Fathima Rifna',
-      photo: '',
+      photo: '/images/officials/female-teacher-mockup.jpeg',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Supporting student mathematics circles, concept mastery, and academic Olympiad training.',
@@ -314,7 +314,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-09',
       name: 'Mr. IL. Isthihar',
-      photo: '',
+      photo: '/images/officials/mr-il-isthihar.png',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Fostering passion for mathematical problem-solving, arithmetic reasoning, and geometry.',
@@ -325,7 +325,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-10',
       name: 'Mrs. P. Sarveswaran',
-      photo: '',
+      photo: '/images/officials/female-teacher-mockup.jpeg',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Guiding students through foundational and advanced mathematical concepts with enthusiasm.',
@@ -336,7 +336,7 @@ const DEFAULT_DATA: ClubData = {
     {
       id: 't-11',
       name: 'Mr. ALM. Sameer',
-      photo: '',
+      photo: '/images/officials/male-teacher-mockup.jpeg',
       designation: 'Maths Teacher',
       subject: 'Mathematics',
       introduction: 'Promoting logical deduction, mathematics exhibitions, and student interactive learning.',
@@ -346,20 +346,20 @@ const DEFAULT_DATA: ClubData = {
     },
   ],
   committee: [
-    { id: 'pres', name: 'L. Mohamed Simam', position: 'President', classGrade: '12 Phy.Sci', bio: 'Leads the club operations, chairs general and executive assemblies, and represents the club in school and regional mathematics events.', responsibilities: 'Lead the club, chair meetings, represent the club at school events, coordinate all club activities, and ensure the club achieves its objectives.', term: '2026', photo: '', contact: '', order: 1 },
-    { id: 'sec', name: 'MJ. Abdullah', position: 'Secretary', classGrade: '12 Phy.Sci', bio: 'Manages official club correspondence, agendas, minutes of meetings, and membership records.', responsibilities: 'Maintain records, handle correspondence, prepare meeting agendas and minutes, manage membership records, and coordinate communication.', term: '2026', photo: '', contact: '', order: 2 },
-    { id: 'tres', name: 'M. Ahamed Zahin', position: 'Treasurer', classGrade: '12 Phy.Sci', bio: 'Manages financial records, budgets, and transparent reporting for all club events and projects.', responsibilities: 'Manage club finances, maintain financial records, prepare budgets, handle income and expenditure, and present financial reports.', term: '2026', photo: '', contact: '', order: 3 },
-    { id: 'pro', name: 'AR. Bhazil Ahamed', position: 'P.R.O', classGrade: '12 Phy.Sci', bio: 'Directs public communication, student outreach, event promotions, and club community presence.', responsibilities: 'Manage public communications, social media presence, event promotions, photography, and maintain the club\'s public image.', term: '2026', photo: '', contact: '', order: 4 },
-    { id: 'doc', name: 'S. Muhammathu Amal', position: 'Documentation Officer', classGrade: 'Grade 10', bio: 'Documents club activities, maintains digital archives, compiles reports, and preserves institutional knowledge.', responsibilities: 'Document all club activities, maintain the archive, prepare reports, manage the digital documentation system, and preserve institutional knowledge.', term: '2026', photo: '', contact: '', order: 5 },
+    { id: 'pres', name: 'L. Mohamed Simam', position: 'President', classGrade: '12 Phy.Sci', bio: 'Leads the club operations, chairs general and executive assemblies, and represents the club in school and regional mathematics events.', responsibilities: 'Lead the club, chair meetings, represent the club at school events, coordinate all club activities, and ensure the club achieves its objectives.', term: '2026', photo: '/images/officials/lm-simam.png', contact: '', order: 1 },
+    { id: 'sec', name: 'MJ. Abdullah', position: 'Secretary', classGrade: '12 Phy.Sci', bio: 'Manages official club correspondence, agendas, minutes of meetings, and membership records.', responsibilities: 'Maintain records, handle correspondence, prepare meeting agendas and minutes, manage membership records, and coordinate communication.', term: '2026', photo: '/images/officials/mj-abdullah.png', contact: '', order: 2 },
+    { id: 'tres', name: 'M. Ahamed Zahin', position: 'Treasurer', classGrade: '12 Phy.Sci', bio: 'Manages financial records, budgets, and transparent reporting for all club events and projects.', responsibilities: 'Manage club finances, maintain financial records, prepare budgets, handle income and expenditure, and present financial reports.', term: '2026', photo: '/images/officials/m-ahmed-zahin.png', contact: '', order: 3 },
+    { id: 'pro', name: 'AR. Bhazil Ahamed', position: 'P.R.O', classGrade: '12 Phy.Sci', bio: 'Directs public communication, student outreach, event promotions, and club community presence.', responsibilities: 'Manage public communications, social media presence, event promotions, photography, and maintain the club\'s public image.', term: '2026', photo: '/images/officials/ar-bhazil-ahmed.jpeg', contact: '', order: 4 },
+    { id: 'doc', name: 'S. Muhammathu Amal', position: 'Documentation Officer', classGrade: 'Grade 10', bio: 'Documents club activities, maintains digital archives, compiles reports, and preserves institutional knowledge.', responsibilities: 'Document all club activities, maintain the archive, prepare reports, manage the digital documentation system, and preserve institutional knowledge.', term: '2026', photo: '/images/officials/s-muhammathu-amal.png', contact: '', order: 5 },
   ],
   coordinators: [
-    { id: 'coord-1', number: 1, name: 'L. Mohamed Simthy', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-2', number: 2, name: 'S. Affly Humaid', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-3', number: 3, name: 'MH. Mazin Abdullah', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-4', number: 4, name: 'JG. Abdullah Hani', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-5', number: 5, name: 'MZ. Yusri Aqar', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-6', number: 6, name: 'R. Kithursan', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
-    { id: 'coord-7', number: 7, name: 'AS. Aakif Ahmed', photo: '', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-1', number: 1, name: 'L. Mohamed Simthy', photo: '/images/officials/l-mohamed-simthy.png', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-2', number: 2, name: 'S. Affly Humaid', photo: '/images/officials/s-affly-humaid.jpeg', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-3', number: 3, name: 'MH. Mazin Abdullah', photo: '/images/officials/mh-mazin-abdullah.png', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-4', number: 4, name: 'JG. Abdullah Hani', photo: '/images/officials/jg-abdullah-hani.jpeg', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-5', number: 5, name: 'MZ. Yusri Aqar', photo: '/images/officials/mz-yusri-aqar.jpeg', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-6', number: 6, name: 'R. Kithursan', photo: '/images/officials/r-kithirsan.png', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
+    { id: 'coord-7', number: 7, name: 'AS. Aakif Ahmed', photo: '/images/officials/as-aakif-abdullah.png', classGrade: 'Grade 10', portfolio: 'Coordinator', bio: 'Student coordinator managing academic workshops, problem-solving circles, and event coordination.', academicYear: '2026', contact: '' },
   ],
   members: [
     {
@@ -700,10 +700,36 @@ export function loadData(): ClubData {
       return {
         ...DEFAULT_DATA,
         ...parsed,
-        principals: (parsed.principals && parsed.principals.length >= 5) ? parsed.principals : DEFAULT_DATA.principals,
-        teachers: (parsed.teachers && parsed.teachers.length >= 11 && parsed.teachers[0].name === DEFAULT_DATA.teachers[0].name) ? parsed.teachers : DEFAULT_DATA.teachers,
-        committee: (parsed.committee && parsed.committee.length >= 5 && parsed.committee[1]?.name === DEFAULT_DATA.committee[1].name) ? parsed.committee : DEFAULT_DATA.committee,
-        coordinators: (parsed.coordinators && parsed.coordinators.length >= 7 && parsed.coordinators[0].name === DEFAULT_DATA.coordinators[0].name) ? parsed.coordinators : DEFAULT_DATA.coordinators,
+        presidentName: parsed.presidentName || DEFAULT_DATA.presidentName,
+        presidentPhoto: parsed.presidentPhoto || DEFAULT_DATA.presidentPhoto,
+        principals: (parsed.principals && parsed.principals.length >= 5)
+          ? parsed.principals.map((p: Principal, idx: number) => ({
+              ...DEFAULT_DATA.principals[idx],
+              ...p,
+              photo: p.photo || DEFAULT_DATA.principals[idx]?.photo || '',
+            }))
+          : DEFAULT_DATA.principals,
+        teachers: (parsed.teachers && parsed.teachers.length >= 11 && parsed.teachers[0].name === DEFAULT_DATA.teachers[0].name)
+          ? parsed.teachers.map((t: Teacher, idx: number) => ({
+              ...DEFAULT_DATA.teachers[idx],
+              ...t,
+              photo: (!t.photo || (idx === 0 && t.photo.includes('mockup'))) ? (DEFAULT_DATA.teachers[idx]?.photo || '') : t.photo,
+            }))
+          : DEFAULT_DATA.teachers,
+        committee: (parsed.committee && parsed.committee.length >= 5 && parsed.committee[1]?.name === DEFAULT_DATA.committee[1].name)
+          ? parsed.committee.map((m: CommitteeMember, idx: number) => ({
+              ...DEFAULT_DATA.committee[idx],
+              ...m,
+              photo: m.photo || DEFAULT_DATA.committee[idx]?.photo || '',
+            }))
+          : DEFAULT_DATA.committee,
+        coordinators: (parsed.coordinators && parsed.coordinators.length >= 7 && parsed.coordinators[0].name === DEFAULT_DATA.coordinators[0].name)
+          ? parsed.coordinators.map((c: Coordinator, idx: number) => ({
+              ...DEFAULT_DATA.coordinators[idx],
+              ...c,
+              photo: c.photo || DEFAULT_DATA.coordinators[idx]?.photo || '',
+            }))
+          : DEFAULT_DATA.coordinators,
         members: (parsed.members && parsed.members.length > 0) ? parsed.members : DEFAULT_DATA.members,
         events: (parsed.events && parsed.events.length >= 2 && parsed.events[0]?.coverImage === DEFAULT_DATA.events[0]?.coverImage && parsed.events[1]?.coverImage === DEFAULT_DATA.events[1]?.coverImage) ? parsed.events : DEFAULT_DATA.events,
         achievements: (parsed.achievements && parsed.achievements.length > 0 && parsed.achievements[0]?.title) ? parsed.achievements : DEFAULT_DATA.achievements,
