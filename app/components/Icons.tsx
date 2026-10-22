@@ -253,6 +253,50 @@ export const GlobeIcon = ({ size = 20, className = '', color = 'currentColor', s
   </svg>
 );
 
+export const VolumeUpIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+  </svg>
+);
+
+export const VolumeOffIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+    <line x1="23" y1="9" x2="17" y2="15" />
+    <line x1="17" y1="9" x2="23" y2="15" />
+  </svg>
+);
+
+export const PlayIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color} stroke="none" className={className} style={style}>
+    <polygon points="5 3 19 12 5 21 5 3" />
+  </svg>
+);
+
+export const PauseIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color} stroke="none" className={className} style={style}>
+    <rect x="6" y="4" width="4" height="16" />
+    <rect x="14" y="4" width="4" height="16" />
+  </svg>
+);
+
+export const MegaphoneIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <path d="M3 11l18-5v12L3 13v-2z" />
+    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+  </svg>
+);
+
+export const MaximizeIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+    <polyline points="15 3 21 3 21 9" />
+    <polyline points="9 21 3 21 3 15" />
+    <line x1="21" y1="3" x2="14" y2="10" />
+    <line x1="3" y1="21" x2="10" y2="14" />
+  </svg>
+);
+
 export const ExternalLinkIcon = ({ size = 20, className = '', color = 'currentColor', style }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -260,5 +304,6 @@ export const ExternalLinkIcon = ({ size = 20, className = '', color = 'currentCo
     <line x1="10" y1="14" x2="21" y2="3" />
   </svg>
 );
+
 
 

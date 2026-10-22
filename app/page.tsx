@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { loadData } from './lib/data';
 import { AnimateOnScroll, AnimatedCounter, FloatingSymbols, MathCurveSVG } from './components/Animations';
+import NoticeBoardSection from './components/NoticeBoardSection';
 import {
   UsersIcon,
   TargetIcon,
@@ -554,6 +555,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ========== NOTICE BOARD (GOING ON...) ========== */}
+      <NoticeBoardSection />
 
       {/* ========== ACHIEVEMENTS BLOCK (UNDER STATS) ========== */}
       <section className="section" style={{ background: 'var(--color-white)', borderBottom: '1px solid var(--color-border-light)' }}>

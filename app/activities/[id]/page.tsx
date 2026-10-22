@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { loadData, ClubData, ClubEvent } from '@/app/lib/data';
+import { loadData, ClubData, ClubEvent, DEFAULT_DATA } from '@/app/lib/data';
 import { PageHero, AnimateOnScroll } from '@/app/components/Animations';
 import {
   CalendarIcon,
@@ -21,13 +21,11 @@ import {
 export default function EventDetailPage() {
   const params = useParams();
   const id = typeof params?.id === 'string' ? params.id : Array.isArray(params?.id) ? params.id[0] : '';
-  const [data, setData] = useState<ClubData | null>(null);
+  const [data, setData] = useState<ClubData>(DEFAULT_DATA);
 
   useEffect(() => {
     setData(loadData());
   }, []);
-
-  if (!data) return null;
 
   const event = (data.events || []).find((e: ClubEvent) => e.id === id);
 
@@ -467,53 +465,73 @@ export default function EventDetailPage() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: 'var(--space-lg)',
             }}>
-              {(event.photos || []).map((photoUrl, idx) => {
-                const seminarCaptions = [
-                  'Inter-School Mathematics Debate on Stage (President L. Mohamed Simam, Secretary MJ. Abdullah, Documentation Officer S. Muhammathu Amal)',
-                  'Official Delegation Group Photo — All 12 Committee Members with Teacher In-charge at Al-Azhar Vidyalaya Kalmunai',
-                  'Interactive Session & Mathematical Problem-Solving Games at tables',
-                ];
-                const meetingCaptions = [
-                  'Commencement & Opening Address in the Mathematics Laboratory',
-                  'Mr. MI. Nawas (Maths Coordinator) addressing members on the 80th Anniversary Exhibition',
-                  'President L. Mohamed Simam delivering introduction to Math Club vision & objectives',
-                  'Secretary MJ. Abdullah presenting motivational address on public confidence & stage presence',
-                  'Executive Committee & Student Coordinators appointed for the 80th Anniversary Exhibition',
-                ];
-                const caption = event.id === 'event-02'
-                  ? (meetingCaptions[idx] || `Exhibition Planning Photo ${idx + 1}`)
-                  : (seminarCaptions[idx] || `Event Photograph ${idx + 1}`);
+              {(() => {
+                const defaultPhotos = event.id === 'event-02'
+                  ? [
+                      '/images/events/meeting-oct14-img1.jpg',
+                      '/images/events/meeting-oct14-img2.jpg',
+                      '/images/events/meeting-oct14-img3.jpg',
+                      '/images/events/meeting-oct14-img4.jpg',
+                      '/images/events/meeting-oct14-img5.jpg',
+                    ]
+                  : [
+                      '/images/events/seminar-cover-debate.jpg',
+                      '/images/events/seminar-group-photo.jpg',
+                      '/images/events/seminar-session-table.jpg',
+                    ];
+                const rawPhotos = (event.photos && event.photos.length > 0 && typeof event.photos[0] === 'string' && event.photos[0].startsWith('/images/'))
+                  ? event.photos
+                  : defaultPhotos;
 
-                return (
-                  <div
-                    key={idx}
-                    style={{
-                      borderRadius: 'var(--radius-md)',
-                      overflow: 'hidden',
-                      border: '1px solid var(--color-border-light)',
-                      background: 'var(--color-light-bg)',
-                      boxShadow: 'var(--shadow-sm)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    <div style={{ position: 'relative', height: '220px', width: '100%' }}>
-                      <Image
-                        src={photoUrl}
-                        alt={caption}
-                        fill
-                        unoptimized
-                        style={{ objectFit: 'cover' }}
-                      />
+                return rawPhotos.map((photoUrl, idx) => {
+                  const seminarCaptions = [
+                    'Inter-School Mathematics Debate on Stage (President L. Mohamed Simam, Secretary MJ. Abdullah, Documentation Officer S. Muhammathu Amal)',
+                    'Official Delegation Group Photo — All 12 Committee Members with Teacher In-charge at Al-Azhar Vidyalaya Kalmunai',
+                    'Interactive Session & Mathematical Problem-Solving Games at tables',
+                  ];
+                  const meetingCaptions = [
+                    'Commencement & Opening Address in the Mathematics Laboratory',
+                    'Mr. MI. Nawas (Maths Coordinator) addressing members on the 80th Anniversary Exhibition',
+                    'President L. Mohamed Simam delivering introduction to Math Club vision & objectives',
+                    'Secretary MJ. Abdullah presenting motivational address on public confidence & stage presence',
+                    'Executive Committee & Student Coordinators appointed for the 80th Anniversary Exhibition',
+                  ];
+                  const caption = event.id === 'event-02'
+                    ? (meetingCaptions[idx] || `Exhibition Planning Photo ${idx + 1}`)
+                    : (seminarCaptions[idx] || `Event Photograph ${idx + 1}`);
+
+                  return (
+                    <div
+                      key={idx}
+                      style={{
+                        borderRadius: 'var(--radius-md)',
+                        overflow: 'hidden',
+                        border: '1px solid var(--color-border-light)',
+                        background: 'var(--color-white)',
+                        boxShadow: 'var(--shadow-sm)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <div style={{ position: 'relative', height: '240px', width: '100%', background: '#0F172A' }}>
+                        <Image
+                          src={photoUrl}
+                          alt={caption}
+                          fill
+                          unoptimized
+                          priority={idx < 2}
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                      <div style={{ padding: '0.85rem 1rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                        <p style={{ fontSize: '0.82rem', color: 'var(--color-text-primary)', lineHeight: 1.45, margin: 0, fontWeight: 500 }}>
+                          {caption}
+                        </p>
+                      </div>
                     </div>
-                    <div style={{ padding: '0.85rem 1rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <p style={{ fontSize: '0.82rem', color: 'var(--color-text-primary)', lineHeight: 1.45, margin: 0, fontWeight: 500 }}>
-                        {caption}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                });
+              })()}
             </div>
           </div>
 

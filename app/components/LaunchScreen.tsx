@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const LOG_MESSAGES = [
   { time: '0.12s', text: '[SYS] Initializing Quantum Academic Core v2.6...' },
@@ -16,6 +17,7 @@ const LOG_MESSAGES = [
 ];
 
 export default function LaunchScreen() {
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [isLaunching, setIsLaunching] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
@@ -65,13 +67,14 @@ export default function LaunchScreen() {
   };
 
   useEffect(() => {
+    if (pathname !== '/') return;
     setMounted(true);
     document.body.style.overflow = 'hidden';
 
     return () => {
       document.body.style.overflow = '';
     };
-  }, []);
+  }, [pathname]);
 
   // Time ticking and radar surveillance animation loop during launch
   useEffect(() => {
@@ -130,7 +133,7 @@ export default function LaunchScreen() {
     document.body.style.overflow = '';
   };
 
-  if (!mounted || isCompleted) return null;
+  if (!mounted || isCompleted || pathname !== '/') return null;
 
   // Format millisecond timer: T-00:03.450
   const seconds = Math.floor(tickerMs / 1000);

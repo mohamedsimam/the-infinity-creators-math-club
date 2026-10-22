@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { loadData } from '../lib/data';
+import { loadData, DEFAULT_DATA } from '../lib/data';
 import { PageHero, AnimateOnScroll } from '../components/Animations';
 import { CalendarIcon, MapPinIcon, CloseIcon, FileTextIcon, ArrowRightIcon } from '../components/Icons';
 import type { ClubData, ClubEvent } from '../lib/data';
@@ -25,7 +25,7 @@ const EVENT_CATEGORIES = [
 function ActivitiesContent() {
   const searchParams = useSearchParams();
   const eventIdParam = searchParams.get('eventId');
-  const [data, setData] = useState<ClubData | null>(null);
+  const [data, setData] = useState<ClubData>(DEFAULT_DATA);
   const [filter, setFilter] = useState('All');
   const [statusFilter, setStatusFilter] = useState<'all' | 'upcoming' | 'completed'>('all');
   const [selectedEvent, setSelectedEvent] = useState<ClubEvent | null>(null);
@@ -38,7 +38,6 @@ function ActivitiesContent() {
       if (match) setSelectedEvent(match);
     }
   }, [eventIdParam]);
-  if (!data) return null;
 
   const now = new Date();
   let events = data.events.filter(e => e.status === 'published');

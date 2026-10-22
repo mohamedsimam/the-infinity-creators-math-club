@@ -181,7 +181,7 @@ export interface ClubData {
   objectives: string[];
 }
 
-const DEFAULT_DATA: ClubData = {
+export const DEFAULT_DATA: ClubData = {
   welcomeMessage: "Welcome to The Infinity Creators — the official MATH CLUB of KM/KM/ Al-Ashraq MMV (National School), Nintavur. Our club is dedicated to exploring the beauty and power of mathematics, developing logical minds, and inspiring the next generation of thinkers and innovators. We believe every student has the potential to discover the wonder of mathematics.",
   presidentName: 'L. Mohamed Simam',
   presidentPhoto: '/images/officials/lm-simam.png',
@@ -734,14 +734,15 @@ export function loadData(): ClubData {
         events: (parsed.events && parsed.events.length >= 2)
           ? parsed.events.map((ev: ClubEvent, idx: number) => {
               const def = DEFAULT_DATA.events[idx] || DEFAULT_DATA.events[0];
-              const validCover = (ev.coverImage && ev.coverImage.startsWith('/images/events/'))
+              const validCover = (ev.coverImage && typeof ev.coverImage === 'string' && ev.coverImage.startsWith('/images/events/'))
                 ? ev.coverImage
                 : def.coverImage;
+              const hasValidPhotos = Array.isArray(ev.photos) && ev.photos.length > 0 && typeof ev.photos[0] === 'string' && ev.photos[0].startsWith('/images/events/');
               return {
                 ...def,
                 ...ev,
                 coverImage: validCover,
-                photos: (ev.photos && ev.photos.length > 0) ? ev.photos : def.photos,
+                photos: hasValidPhotos ? ev.photos : def.photos,
               };
             })
           : DEFAULT_DATA.events,
