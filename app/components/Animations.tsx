@@ -19,18 +19,34 @@ export function AnimateOnScroll({ children, delay = 0, className = '' }: Animate
       return;
     }
 
+    // If already in or near viewport on mount, show immediately
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 1.25) {
+        setIsVisible(true);
+      }
+    }
+
+    // Safety fallback timer so elements are NEVER permanently trapped at opacity 0
+    const fallbackTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, Math.min(300 + delay, 700));
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setIsVisible(true), delay);
+          setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.01, rootMargin: '120px 0px 120px 0px' }
     );
 
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
   }, [delay]);
 
   return (
@@ -39,8 +55,8 @@ export function AnimateOnScroll({ children, delay = 0, className = '' }: Animate
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-        transition: `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`,
+        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+        transition: `opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
       }}
     >
       {children}

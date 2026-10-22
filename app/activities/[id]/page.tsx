@@ -95,23 +95,26 @@ export default function EventDetailPage() {
               height: 'clamp(260px, 45vw, 440px)',
               background: 'var(--gradient-primary)',
             }}>
-              {event.coverImage ? (
-                <>
-                  <Image
-                    src={event.coverImage}
-                    alt={event.title}
-                    fill
-                    unoptimized
-                    priority
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.2) 60%, transparent 100%)',
-                  }} />
-                </>
-              ) : null}
+              {(() => {
+                const coverSrc = event.coverImage || (event.photos && event.photos[0]) || (event.id === 'event-02' ? '/images/events/meeting-oct14-img3.jpg' : '/images/events/seminar-group-photo.jpg');
+                return coverSrc ? (
+                  <>
+                    <Image
+                      src={coverSrc}
+                      alt={event.title}
+                      fill
+                      unoptimized
+                      priority
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.2) 60%, transparent 100%)',
+                    }} />
+                  </>
+                ) : null;
+              })()}
 
               {/* Status and Category Badges */}
               <div style={{
@@ -465,12 +468,21 @@ export default function EventDetailPage() {
               gap: 'var(--space-lg)',
             }}>
               {(event.photos || []).map((photoUrl, idx) => {
-                const captions = [
+                const seminarCaptions = [
                   'Inter-School Mathematics Debate on Stage (President L. Mohamed Simam, Secretary MJ. Abdullah, Documentation Officer S. Muhammathu Amal)',
                   'Official Delegation Group Photo — All 12 Committee Members with Teacher In-charge at Al-Azhar Vidyalaya Kalmunai',
                   'Interactive Session & Mathematical Problem-Solving Games at tables',
                 ];
-                const caption = captions[idx] || `Event Photo ${idx + 1}`;
+                const meetingCaptions = [
+                  'Commencement & Opening Address in the Mathematics Laboratory',
+                  'Mr. MI. Nawas (Maths Coordinator) addressing members on the 80th Anniversary Exhibition',
+                  'President L. Mohamed Simam delivering introduction to Math Club vision & objectives',
+                  'Secretary MJ. Abdullah presenting motivational address on public confidence & stage presence',
+                  'Executive Committee & Student Coordinators appointed for the 80th Anniversary Exhibition',
+                ];
+                const caption = event.id === 'event-02'
+                  ? (meetingCaptions[idx] || `Exhibition Planning Photo ${idx + 1}`)
+                  : (seminarCaptions[idx] || `Event Photograph ${idx + 1}`);
 
                 return (
                   <div

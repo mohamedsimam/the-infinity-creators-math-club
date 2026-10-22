@@ -731,7 +731,20 @@ export function loadData(): ClubData {
             }))
           : DEFAULT_DATA.coordinators,
         members: (parsed.members && parsed.members.length > 0) ? parsed.members : DEFAULT_DATA.members,
-        events: (parsed.events && parsed.events.length >= 2 && parsed.events[0]?.coverImage === DEFAULT_DATA.events[0]?.coverImage && parsed.events[1]?.coverImage === DEFAULT_DATA.events[1]?.coverImage) ? parsed.events : DEFAULT_DATA.events,
+        events: (parsed.events && parsed.events.length >= 2)
+          ? parsed.events.map((ev: ClubEvent, idx: number) => {
+              const def = DEFAULT_DATA.events[idx] || DEFAULT_DATA.events[0];
+              const validCover = (ev.coverImage && ev.coverImage.startsWith('/images/events/'))
+                ? ev.coverImage
+                : def.coverImage;
+              return {
+                ...def,
+                ...ev,
+                coverImage: validCover,
+                photos: (ev.photos && ev.photos.length > 0) ? ev.photos : def.photos,
+              };
+            })
+          : DEFAULT_DATA.events,
         achievements: (parsed.achievements && parsed.achievements.length > 0 && parsed.achievements[0]?.title) ? parsed.achievements : DEFAULT_DATA.achievements,
         gallery: (parsed.gallery && parsed.gallery.length >= 2 && parsed.gallery[0]?.coverImage === DEFAULT_DATA.gallery[0]?.coverImage && parsed.gallery[1]?.coverImage === DEFAULT_DATA.gallery[1]?.coverImage) ? parsed.gallery : DEFAULT_DATA.gallery,
         timelineMilestones: (parsed.timelineMilestones && parsed.timelineMilestones.length >= 3) ? parsed.timelineMilestones : DEFAULT_DATA.timelineMilestones,

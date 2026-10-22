@@ -101,6 +101,7 @@ function ActivitiesContent() {
             <div className="grid-3">
               {filteredEvents.map((event, i) => {
                 const isUpcoming = new Date(event.date) >= now;
+                const coverImg = event.coverImage || (event.photos && event.photos[0]) || (event.id === 'event-02' || i === 1 ? '/images/events/meeting-oct14-img3.jpg' : '/images/events/seminar-group-photo.jpg');
                 return (
                   <AnimateOnScroll key={event.id} delay={i * 80}>
                     <Link
@@ -136,14 +137,14 @@ function ActivitiesContent() {
                           alignItems: 'center',
                           justifyContent: 'center',
                         }}>
-                          {event.coverImage ? (
+                          {coverImg ? (
                             <>
                               <Image
-                                src={event.coverImage}
+                                src={coverImg}
                                 alt={event.title}
                                 fill
                                 unoptimized
-                                priority={i === 0}
+                                priority={i < 4}
                                 style={{ objectFit: 'cover' }}
                               />
                               <div style={{
