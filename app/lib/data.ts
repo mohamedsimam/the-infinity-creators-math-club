@@ -1,5 +1,3 @@
-'use client';
-
 /* =============================================
    DATA STORE — The Infinity Creators
    Local storage-backed data management
