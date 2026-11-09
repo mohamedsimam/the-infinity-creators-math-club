@@ -58,10 +58,14 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
-      - name: Ensure .nojekyll and CNAME exist
+      - name: Ensure .nojekyll, CNAME and route fallbacks exist
         run: |
           touch out/.nojekyll
           echo "infinitycreators.edu.lk" > out/CNAME
+          find out -mindepth 2 -name "index.html" | while read -r f; do
+            dir=$(dirname "$f")
+            cp "$f" "${dir}.html"
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
