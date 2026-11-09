@@ -1,32 +1,30 @@
 1:"$Sreact.fragment"
-2:"/_next/static/chunks/3xxobhh_6woh6.js"
-3:"/_next/static/chunks/1tjnqpyin5d3o.js"
-4:"/_next/static/chunks/0-5icbkrkfu9f.js"
-5:I[42756,["$2","$3","$4"],"default"]
-6:I[47716,["$2","$3","$4"],"default"]
-7:I[55672,["$2","$3","$4"],"default"]
-8:I[39756,["$2","$3","$4"],"default"]
-9:I[37457,["$2","$3","$4"],"default"]
-a:I[28129,["$2","$3","$4"],"default"]
-e:I[47257,["$2","$3","$4"],"ClientPageRoot"]
-f:"/_next/static/chunks/2tf1rbargyswo.js"
-10:I[17017,["$2","$3","$4","$f"],"default"]
-13:I[97367,["$2","$3","$4"],"OutletBoundary"]
-14:"$Sreact.suspense"
-16:"ViewportBoundary"
-17:I[97367,["$2","$3","$4"],"$16"]
-19:"MetadataBoundary"
-1a:I[97367,["$2","$3","$4"],"$19"]
-1c:I[68027,["$2","$3","$4"],"default",1]
+2:"/_next/static/chunks/0-5icbkrkfu9f.js"
+3:"/_next/static/chunks/1t-2n3rm2yn7x.js"
+4:I[42756,["$2","$3"],"default"]
+5:I[55672,["$2","$3"],"default"]
+6:I[39756,["$2","$3"],"default"]
+7:I[37457,["$2","$3"],"default"]
+8:I[28129,["$2","$3"],"default"]
+c:I[47257,["$2","$3"],"ClientPageRoot"]
+d:"/_next/static/chunks/2tf1rbargyswo.js"
+e:I[17017,["$2","$3","$d"],"default"]
+11:I[97367,["$2","$3"],"OutletBoundary"]
+12:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$2","$3"],"$14"]
+17:"MetadataBoundary"
+18:I[97367,["$2","$3"],"$17"]
+1a:I[68027,["$2","$3"],"default",1]
 :HL["/_next/static/chunks/33np6eymhwna3.css","style"]
-c:X
-d:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$Le",null,{"Component":"$10","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@11","$@12"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/2tf1rbargyswo.js","async":true,"nonce":"$undefined"}]],["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]]}],"p":false,"v":null}}]]
-b:[["children",{"s":"members","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L8",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$c"},"c":"$Qd"}]]
-0:{"P":null,"c":["","members",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/33np6eymhwna3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3xxobhh_6woh6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/1tjnqpyin5d3o.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/0-5icbkrkfu9f.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","main",null,{"children":["$","$L8",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$La",null,{}]]}]}]]}],"p":false,"v":null},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L17",null,{"children":"$L18"}],["$","$L1a",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$14",null,{"name":"Next.Metadata","children":"$L1b"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1c",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/33np6eymhwna3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"ytQ2VV6yBc_DyxPJMiU-A"}
-c:C
-11:{}
-12:"$d:0:1:d:r:props:children:0:props:serverProvidedParams:params"
-18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-1d:I[27201,["$2","$3","$4"],"IconMark"]
-15:null
-1b:[["$","title","0",{"children":"The Infinity Creators — Math Club | KM/KM/ Al-Ashraq MMV (National School)"}],["$","meta","1",{"name":"description","content":"Official website of The Infinity Creators, the Math Club of KM/KM/ Al-Ashraq MMV (National School), Nintavur. Exploring the beauty of mathematics, developing logical minds, and inspiring innovators. Established 2026."}],["$","meta","2",{"name":"keywords","content":"Math Club, Infinity Creators, KM/KM/ Al-Ashraq MMV, National School, Nintavur, Math, STEM, Education"}],["$","link","3",{"rel":"shortcut icon","href":"/images/logos/club-logo.png"}],["$","link","4",{"rel":"icon","href":"/favicon.ico?favicon.3_ijv1jw2z4o7.ico","sizes":"500x500","type":"image/x-icon"}],["$","link","5",{"rel":"icon","href":"/images/logos/club-logo.png"}],["$","link","6",{"rel":"icon","href":"/icon.png"}],["$","link","7",{"rel":"apple-touch-icon","href":"/images/logos/club-logo.png"}],["$","$L1d","8",{}]]
+a:X
+b:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$Lc",null,{"Component":"$e","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@f","$@10"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/2tf1rbargyswo.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":false,"v":null}}]]
+9:[["children",{"s":"members","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$a"},"c":"$Qb"}]]
+0:{"P":null,"c":["","members",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/33np6eymhwna3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0-5icbkrkfu9f.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/1t-2n3rm2yn7x.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L4",null,{}],["$","$L5",null,{}],["$","main",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L8",null,{}]]}]}]]}],"p":false,"v":null},"c":"$Q9"},"h":{"r":["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":"$L19"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1a",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/33np6eymhwna3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"S7qn79rOLGif0-Wz6355g"}
+a:C
+f:{}
+10:"$b:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1b:I[27201,["$2","$3"],"IconMark"]
+13:null
+19:[["$","title","0",{"children":"The Infinity Creators — Math Club | KM/KM/ Al-Ashraq MMV (National School)"}],["$","meta","1",{"name":"description","content":"Official website of The Infinity Creators, the Math Club of KM/KM/ Al-Ashraq MMV (National School), Nintavur. Exploring the beauty of mathematics, developing logical minds, and inspiring innovators. Established 2026."}],["$","meta","2",{"name":"keywords","content":"Math Club, Infinity Creators, KM/KM/ Al-Ashraq MMV, National School, Nintavur, Math, STEM, Education"}],["$","link","3",{"rel":"shortcut icon","href":"/images/logos/club-logo.png"}],["$","link","4",{"rel":"icon","href":"/favicon.ico?favicon.3_ijv1jw2z4o7.ico","sizes":"500x500","type":"image/x-icon"}],["$","link","5",{"rel":"icon","href":"/images/logos/club-logo.png"}],["$","link","6",{"rel":"icon","href":"/icon.png"}],["$","link","7",{"rel":"apple-touch-icon","href":"/images/logos/club-logo.png"}],["$","$L1b","8",{}]]
